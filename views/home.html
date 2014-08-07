@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Web Chat - Node.js Server</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css" />
+	<link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
+
+</head>
+
+<body>
+
+	<header class="banner">
+		<h1 class="bannertext">
+		WEB CHAT - NODE.JS
+		</h1>		
+	</header>
+
+	<section class="section">
+
+		<div class="connect">
+			<h3>LOGIN</h3>
+			<br/>
+			<form class="loginForm">
+				<input type="text" id="yourName" placeholder="Your name" /><br/>
+				<input type="submit" id="yourEnter" value="CHAT" />
+			</form>
+		</div>
+		<div class="join">
+			<h2>Ping your friends</h2>
+			<br/>
+
+			<form class="loginForm">
+				<input type="text" id="hisName" placeholder="Your name" /><br/>
+				<input type="submit" id="hisEnter" value="CHAT" />
+			</form>
+
+		</div>
+
+		<div class="invite">
+
+			<h2>Ping your friend with the URL in the browser </h2>
+
+		</div>
+		
+		<div class="chatscreen">
+
+			<ul class="chats">
+				
+			</ul>
+
+		</div>
+	</section>
+	<footer>
+
+		<form id="chatform">
+
+			<textarea id="message" placeholder="Message.."></textarea>
+			<input type="submit" id="submit" value="SEND"/>
+
+		</form>
+
+	</footer>
+	<script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src='../js/lib/adapter.js'></script>
+    <script src="../js/home.js"></script>
+   
+</body>
+</html>
