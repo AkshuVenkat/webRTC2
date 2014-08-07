@@ -139,11 +139,12 @@ $(function(){
 
     	var data = textarea.val();
     	
-
+        textarea.val("");
+        
     	for(peer_id in dataChannels) {
     		dataChannels[peer_id].send(JSON.stringify({"msg": data, "user" : name, "color" : color}));
     	}
-    	textarea.val("");
+    	
     });
 
     
